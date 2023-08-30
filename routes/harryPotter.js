@@ -1,7 +1,7 @@
 const express = require("express");
 let personagens = require("../data/personagens");
 
-const router = express();
+const router = express;
 
 router.get("/", async (req, res) => {
   console.log(personagens)
@@ -25,10 +25,10 @@ router.post("/", async (req, res) => {
   return res.status(201).json(personagem);
 });
 
-router.put("/:id", async (req, res) => {
+router.put(":id", async (req, res) => {
   const data = req.body;
   const { id } = req.params;
-  const index = personagens.findIndex((item) => item.id === Number(id));
+  const index = personagens.findIndex((item) => item.id === id);
   const idAtual = personagens[index].id;
   const personagem = { ...data, id: idAtual };
   personagens[index] = personagem;

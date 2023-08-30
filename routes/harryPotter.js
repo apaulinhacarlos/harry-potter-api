@@ -35,8 +35,8 @@ router.put(":id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  const personagemEncontrado = data.filter((item) => item.id !== Number(id));
-  await saveFile(characterFound);
+  const semPersonagemDeletado = personagens.filter((item) => item.id !== Number(id));
+  await saveFile(semPersonagemDeletado);
   return res.status(204).send();
 });
 

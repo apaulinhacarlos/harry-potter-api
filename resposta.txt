@@ -1,8 +1,14 @@
-Colocar um container pra rodar na porta 3000 para dar conflito de porta
-Excluido o express do package.json
-1 - alterado arquivo server.js para inicio.js
-2 - no arquivo server.js alterada o nome da variavel de ambiente de PORT para PORTA
-3 - Retirado app.use('/characters', harryPotterRouter); do app.js
-4 - retirado do / da rota de Pput do arquivo harryPotter.js linha 26
-5 - Retirado Number(id) da linha 29 do arquivo harryPotter.js
-6 - Retirado parenteses da linha 4 do arquivo harryPotter.js
+1 - Desliga o Docker
+2 - Container com mesmo nome
+Dentro do container
+3 - npm run dev - falta instalar as depedencias
+4 - Mudar nome da main para inicio no package.json
+5 - Express não encontrado
+6 - Router.get não é uma função - Chamar a função no express()
+7 - Porta undefined - Ajusta variavel de ambiente no inicio.js
+8 - Roda no ThunderClient - get/personagens não existe - app.use('/personagens', ...) no app.js
+9 - PUT - falta o / na rota
+10 - PUT - Falta Number(id) no id da linha 29 do arquivo harryPotter.js
+11 - Trocar data por 'personagens' na linha 38
+12 - Função saveFile não está definido na linha - trocar por 'personagens = semPersonagemDeletado;'
+13 - Estamos tentando alterar uma const - Mudar para let na linha 2

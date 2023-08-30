@@ -4,7 +4,9 @@ services:
   node:
     image: node:16
     container_name: bug-hunting-harry-potter
+    # Mesmo que `docker run -t`
     tty: true
+    # Mesmo que `docker run -i`
     stdin_open: true
     command: bash
     restart: always
@@ -12,9 +14,9 @@ services:
     volumes:
       - ./:/app
     ports:
-      - 3000:3000
+      - 3001:3001
     environment:
-      - PORT=3000
+      - PORT=3001
 
 networks:
   default:

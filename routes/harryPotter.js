@@ -9,18 +9,18 @@ router.get("/", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
-  const filtred = personagens.filter((item) => item.id === Number(id));
-  if (!filtred) {
+  const personagemEncontrado = personagens.filter((item) => item.id === Number(id));
+  if (!personagemEncontrado) {
     return res.status(404).json({ message: "Personagem não encontrado" });
   }
-  return res.status(200).json(filtred);
+  return res.status(200).json(personagemEncontrado);
 });
 
 router.post("/", async (req, res) => {
   const data = req.body;
-  const personagem = { ...data, id: personagens.length + 1 };
-  personagens.push(personagem);
-  return res.status(201).json(personagem);
+  const novoPersonagem = { ...data, id: personagens.length + 1 };
+  personagens.push(novoPersonagem);
+  return res.status(201).json(novoPersonagem);
 });
 
 router.put(":id", async (req, res) => {
@@ -35,8 +35,8 @@ router.put(":id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
-  const personagensFIltred = data.filter((item) => item.id !== Number(id));
-  await saveFile(newTalkers);
+  const personagemEncontrado = data.filter((item) => item.id !== Number(id));
+  await saveFile(characterFound);
   return res.status(204).send();
 });
 

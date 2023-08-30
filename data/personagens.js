@@ -1,28 +1,28 @@
 const data = [
     {
         "id": 1,
-        "name": "Harry Potter",
+        "name": "Coruja Potter",
         "house": "Gryffindor",
         "ancestry": "half-blood",
         "patronus": "stag"
     },
     {
         "id": 2,
-        "name": "Hermione Granger",
+        "name": "Paulinha Granger",
         "house": "Gryffindor",
         "ancestry": "muggleborn",
         "patronus": "otter"
     },
     {
         "id": 3,
-        "name": "Ron Weasley",
+        "name": "Vallim Weasley",
         "house": "Gryffindor",
         "ancestry": "pure-blood",
         "patronus": "Jack Russell terrier"
     },
     {
         "id": 4,
-        "name": "Albus Dumbledore",
+        "name": "Rafa Dumbledore",
         "house": "Gryffindor",
         "ancestry": "half-blood",
         "patronus": "Phoenix"

@@ -1,5 +1,5 @@
 1 - Desliga o Docker
-2 - Container com mesmo nome
+2 - Container com mesmo nome ou porta ocupada
 Dentro do container
 3 - npm run dev - falta instalar as depedencias
 4 - Mudar nome da main para inicio no package.json
